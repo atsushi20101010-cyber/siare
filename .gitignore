@@ -1,0 +1,13 @@
+# OS / システム生成ファイル
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# エディタ
+.vscode/
+*.code-workspace
+
+# 一時ファイル
+*.log
+*.tmp

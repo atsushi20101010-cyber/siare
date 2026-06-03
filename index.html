@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>シアレ株式会社 | マンション運営コンサルタント</title>
+  <meta name="description" content="シアレ株式会社は、財務・法務・修繕の三軸からマンション管理組合の運営を総合的に支えるコンサルティング会社です。">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- ヘッダー（fixed）                            -->
+  <!-- ============================================ -->
+  <header class="site-header" id="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="#">
+        <span class="brand__logo">SIARE</span>
+        <span class="brand__tagline">マンション運営コンサルタント</span>
+      </a>
+
+      <nav class="global-nav" id="global-nav" aria-label="メインナビゲーション">
+        <ul class="global-nav__list">
+          <li><a href="#service">サービス</a></li>
+          <li><a href="#message">代表メッセージ</a></li>
+          <li><a href="#company">会社概要</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-nav">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </div>
+  </header>
+  <!-- /ヘッダー -->
+
+  <main>
+
+    <!-- ============================================ -->
+    <!-- ヒーローセクション                            -->
+    <!-- ============================================ -->
+    <section class="hero" id="hero">
+      <!-- 背景スライドショー（クロスフェード）。画像は images/hero-1〜4.jpg を差し替えるだけで変更可 -->
+      <div class="hero__bg" aria-hidden="true">
+        <img class="hero__slide" src="images/hero-1.jpg" alt="">
+        <img class="hero__slide" src="images/hero-2.jpg" alt="">
+        <img class="hero__slide" src="images/hero-3.jpg" alt="">
+        <img class="hero__slide" src="images/hero-4.jpg" alt="">
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__inner">
+        <div class="hero__text">
+          <h1 class="hero__heading">マンションの未来は、<br><span class="kw">運営</span>が決める。</h1>
+          <a class="hero__contact-link" href="#contact">お問い合わせ</a>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#concept" aria-label="次のセクションへスクロール">
+        <span class="hero__scroll-line" aria-hidden="true"></span>
+        <span class="hero__scroll-text">SCROLL</span>
+      </a>
+    </section>
+    <!-- /ヒーローセクション -->
+
+    <!-- ============================================ -->
+    <!-- ブランドコンセプト                            -->
+    <!-- ============================================ -->
+    <section class="concept" id="concept">
+      <div class="concept__inner">
+        <div class="concept__text">
+          <p class="label">BRAND CONCEPT</p>
+          <h2 class="section-heading section-heading--left">マンションの未来を、<br>ともに考える。</h2>
+          <p class="concept__body">
+            運営のサポートは、本来、管理組合が管理会社に最も期待する部分かもしれません。
+          </p>
+          <p class="concept__body">
+            けれど管理会社の業務は、会計・修繕・日常管理と多岐にわたり、担当者一人で10を超えるマンションを受け持つことも少なくありません。マンションの未来をじっくり考える余裕は、構造的に生まれにくいのが実情です。
+          </p>
+          <p class="concept__body">
+            シアレは、その空白を埋める存在でありたいと考えています。理事会の皆様とともに、マンションの未来を考えるパートナーであり続けます。
+          </p>
+        </div>
+        <div class="concept__images">
+          <!-- <img src="images/concept-1.jpg" alt="..."> -->
+          <img src="https://placehold.co/600x800/EDE9E6/D9805C?text=Concept+1" alt="コンセプトイメージ1">
+          <!-- <img src="images/concept-2.jpg" alt="..."> -->
+          <img src="https://placehold.co/600x800/EDE9E6/D9805C?text=Concept+2" alt="コンセプトイメージ2">
+        </div>
+      </div>
+    </section>
+    <!-- /ブランドコンセプト -->
+
+    <!-- ============================================ -->
+    <!-- サービス（4カード）                          -->
+    <!-- ============================================ -->
+    <section class="service" id="service">
+      <div class="service__inner">
+        <h2 class="section-heading section-heading--ruled"><span>サービス</span></h2>
+
+        <div class="service__grid">
+
+          <!-- カード1 -->
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">
+              <!-- 棒グラフ -->
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="8" y1="42" x2="40" y2="42"></line>
+                <rect x="12" y="26" width="6" height="14"></rect>
+                <rect x="21" y="18" width="6" height="22"></rect>
+                <rect x="30" y="10" width="6" height="30"></rect>
+              </svg>
+            </div>
+            <h3 class="card__title">財務マネジメント</h3>
+            <p class="card__body">
+              10年・20年先を見据えた資金設計。修繕積立金の見直しや長期修繕計画の策定を、具体的にサポートします。
+            </p>
+          </article>
+
+          <!-- カード2 -->
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">
+              <!-- 天秤 -->
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="24" y1="8" x2="24" y2="40"></line>
+                <line x1="12" y1="14" x2="36" y2="14"></line>
+                <line x1="16" y1="40" x2="32" y2="40"></line>
+                <path d="M12 14 L7 26 a5 5 0 0 0 10 0 Z"></path>
+                <path d="M36 14 L31 26 a5 5 0 0 0 10 0 Z"></path>
+              </svg>
+            </div>
+            <h3 class="card__title">法務・運営マネジメント</h3>
+            <p class="card__body">
+              契約関係、管理規約、総会運営、合意形成など、安心できる運営の基盤を整え、円滑なマンション運営の仕組みづくりを支援します。
+            </p>
+          </article>
+
+          <!-- カード3 -->
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">
+              <!-- ビル -->
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="12" y="8" width="24" height="34"></rect>
+                <line x1="18" y1="15" x2="22" y2="15"></line>
+                <line x1="26" y1="15" x2="30" y2="15"></line>
+                <line x1="18" y1="22" x2="22" y2="22"></line>
+                <line x1="26" y1="22" x2="30" y2="22"></line>
+                <line x1="18" y1="29" x2="22" y2="29"></line>
+                <line x1="26" y1="29" x2="30" y2="29"></line>
+                <rect x="21" y="35" width="6" height="7"></rect>
+              </svg>
+            </div>
+            <h3 class="card__title">修繕マネジメント</h3>
+            <p class="card__body">
+              大規模修繕計画と資金計画の最適化から、合意形成、業者選定の支援まで、計画を確実に実行へつなげます。
+            </p>
+          </article>
+
+          <!-- カード4 -->
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">
+              <!-- 人物複数 -->
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="18" cy="18" r="6"></circle>
+                <path d="M8 38 a10 10 0 0 1 20 0"></path>
+                <circle cx="33" cy="20" r="5"></circle>
+                <path d="M30 39 a8 8 0 0 1 12 -6"></path>
+              </svg>
+            </div>
+            <h3 class="card__title">管理会社リプレイス</h3>
+            <p class="card__body">
+              管理会社を変えることは、運営の質を変えること。比較検討、条件整理、候補選定、交渉支援まで、管理組合に寄り添い、円滑な移行を実現します。
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+    <!-- /サービス -->
+
+    <!-- ============================================ -->
+    <!-- シアレが向き合う管理組合                      -->
+    <!-- ============================================ -->
+    <section class="target" id="target">
+      <div class="target__inner">
+        <div class="target__image">
+          <!-- <img src="images/target.jpg" alt="..."> -->
+          <img src="https://placehold.co/800x600/EDE9E6/D9805C?text=Target" alt="管理組合の打ち合わせイメージ">
+        </div>
+        <div class="target__text">
+          <h2 class="section-heading section-heading--left">シアレが向き合う管理組合</h2>
+          <ul class="check-list">
+            <li>
+              <span class="check-list__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"></polyline></svg>
+              </span>
+              <span>管理会社任せに限界を感じ始めている</span>
+            </li>
+            <li>
+              <span class="check-list__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"></polyline></svg>
+              </span>
+              <span>理事会の負担が重く、円滑な進め方を模索している</span>
+            </li>
+            <li>
+              <span class="check-list__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"></polyline></svg>
+              </span>
+              <span>長期修繕や財務の不安に、専門的な助言を求めている</span>
+            </li>
+            <li>
+              <span class="check-list__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"></polyline></svg>
+              </span>
+              <span>将来を見据えた運営をしたいが、何から始めるべきかわからない</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- /シアレが向き合う管理組合 -->
+
+    <!-- ============================================ -->
+    <!-- 代表メッセージ                               -->
+    <!-- ============================================ -->
+    <section class="message" id="message">
+      <div class="message__inner">
+        <div class="message__image">
+          <!-- <img src="images/ceo.jpg" alt="..."> -->
+          <img src="https://placehold.co/800x1000/EDE9E6/D9805C?text=CEO" alt="代表取締役社長 新川 淳史">
+        </div>
+        <div class="message__text">
+          <p class="label">代表メッセージ</p>
+          <h2 class="section-heading section-heading--left">「もったいない」を、見過ごせなかった。</h2>
+          <p class="message__body">
+            管理会社のフロントマンとして働いていた頃、私はいつも「もったいない」という感覚を抱えていました。
+          </p>
+          <p class="message__body">
+            住民の皆さんは、マンションの未来を真剣に考えています。理事会も、良い運営をしようとしている。
+          </p>
+          <p class="message__body">
+            それでも、長期的な視点での助言、財務設計、修繕の備え、法的リスクの読み取り——本来管理会社が担うべき運営の知的支援が、構造的に手薄になりやすい。
+          </p>
+          <p class="message__body">
+            その空白を、シアレは埋めます。管理組合が、自分たちの意思で未来を選べるように。
+          </p>
+          <p class="message__sign">代表取締役社長　新川 淳史</p>
+        </div>
+      </div>
+    </section>
+    <!-- /代表メッセージ -->
+
+    <!-- ============================================ -->
+    <!-- 会社概要                                     -->
+    <!-- ============================================ -->
+    <section class="company" id="company">
+      <div class="company__inner">
+        <div class="company__text">
+          <h2 class="section-heading section-heading--left">会社概要</h2>
+          <dl class="company__list">
+            <div class="company__row">
+              <dt>会社名</dt>
+              <dd>シアレ株式会社</dd>
+            </div>
+            <div class="company__row">
+              <dt>代表者</dt>
+              <dd>代表取締役社長　新川 淳史</dd>
+            </div>
+            <div class="company__row">
+              <dt>所在地</dt>
+              <dd>大阪市北区堂島浜2-2-28　堂島アクシスビル4階　SYNTH</dd>
+            </div>
+            <div class="company__row">
+              <dt>資本金</dt>
+              <dd>3,000,000円</dd>
+            </div>
+            <div class="company__row">
+              <dt>創業</dt>
+              <dd>2025年1月</dd>
+            </div>
+            <div class="company__row">
+              <dt>設立</dt>
+              <dd>2026年6月</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="company__image">
+          <!-- <img src="images/company.jpg" alt="..."> -->
+          <img src="https://placehold.co/800x1000/EDE9E6/D9805C?text=Company" alt="シアレ株式会社オフィスイメージ">
+        </div>
+      </div>
+    </section>
+    <!-- /会社概要 -->
+
+    <!-- ============================================ -->
+    <!-- お問い合わせCTA                              -->
+    <!-- ============================================ -->
+    <section class="cta">
+      <div class="cta__inner">
+        <div class="cta__text">
+          <h2 class="cta__heading">まずはご相談ください。</h2>
+          <p class="cta__body">
+            シアレは、管理組合の意思を尊重し、<br>
+            将来の判断材料を整えるお手伝いをいたします。
+          </p>
+        </div>
+        <div class="cta__action">
+          <a class="btn btn--on-accent" href="#contact">お問い合わせ <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+    <!-- /お問い合わせCTA -->
+
+    <!-- ============================================ -->
+    <!-- 問い合わせフォーム                            -->
+    <!-- ============================================ -->
+    <section class="contact" id="contact">
+      <div class="contact__inner">
+        <header class="contact__head">
+          <p class="label">CONTACT</p>
+          <h2 class="section-heading">お問い合わせ</h2>
+          <p class="contact__lead">
+            ご相談・ご質問など、下記フォームよりお気軽にお問い合わせください。<br>
+            内容を確認のうえ、担当者より折り返しご連絡いたします。
+          </p>
+        </header>
+
+        <form class="contact-form" action="#" method="post" novalidate>
+          <div class="form-row">
+            <label class="form-label" for="cf-name">
+              お名前 <span class="form-required">必須</span>
+            </label>
+            <input class="form-input" type="text" id="cf-name" name="name" autocomplete="name" required>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label" for="cf-building">マンション名・管理組合名</label>
+            <input class="form-input" type="text" id="cf-building" name="building" autocomplete="organization">
+          </div>
+
+          <div class="form-grid">
+            <div class="form-row">
+              <label class="form-label" for="cf-email">
+                メールアドレス <span class="form-required">必須</span>
+              </label>
+              <input class="form-input" type="email" id="cf-email" name="email" autocomplete="email" required>
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="cf-tel">電話番号</label>
+              <input class="form-input" type="tel" id="cf-tel" name="tel" autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label" for="cf-subject">お問い合わせ種別</label>
+            <select class="form-input form-select" id="cf-subject" name="subject">
+              <option value="">選択してください</option>
+              <option value="financial">財務マネジメントについて</option>
+              <option value="legal">法務・運営マネジメントについて</option>
+              <option value="repair">修繕マネジメントについて</option>
+              <option value="replace">管理会社リプレイスについて</option>
+              <option value="other">その他</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label" for="cf-message">
+              お問い合わせ内容 <span class="form-required">必須</span>
+            </label>
+            <textarea class="form-input form-textarea" id="cf-message" name="message" rows="6" required></textarea>
+          </div>
+
+          <div class="form-consent">
+            <label class="form-consent__label">
+              <input type="checkbox" name="consent" required>
+              <span>個人情報の取り扱いに同意のうえ送信します。</span>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn--primary btn--submit" type="submit">
+              送信する <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- /問い合わせフォーム -->
+
+  </main>
+
+  <!-- ============================================ -->
+  <!-- フッター                                     -->
+  <!-- ============================================ -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <span class="brand__logo brand__logo--light">SIARE</span>
+        <span class="brand__tagline brand__tagline--light">マンション運営コンサルタント</span>
+      </div>
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <ul class="footer-nav__list">
+          <li><a href="#service">サービス</a></li>
+          <li><a href="#message">代表メッセージ</a></li>
+          <li><a href="#company">会社概要</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="site-footer__copyright">© SIARE Co., Ltd. All Rights Reserved.</p>
+  </footer>
+  <!-- /フッター -->
+
+  <script src="js/main.js"></script>
+</body>
+</html>

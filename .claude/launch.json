@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "siare",
+      "runtimeExecutable": "perl",
+      "runtimeArgs": ["_server.pl", "4173", "."],
+      "port": 4173
+    }
+  ]
+}
