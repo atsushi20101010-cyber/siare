@@ -6,6 +6,12 @@
       "runtimeExecutable": "perl",
       "runtimeArgs": ["_server.pl", "4173", "."],
       "port": 4173
+    },
+    {
+      "name": "siare-py",
+      "runtimeExecutable": "py",
+      "runtimeArgs": ["-m", "http.server", "4173"],
+      "port": 4173
     }
   ]
 }
