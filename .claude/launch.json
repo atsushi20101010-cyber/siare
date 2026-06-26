@@ -3,14 +3,20 @@
   "configurations": [
     {
       "name": "siare",
-      "runtimeExecutable": "perl",
-      "runtimeArgs": ["_server.pl", "4173", "."],
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", ".claude/serve.ps1", "4173", "."],
       "port": 4173
     },
     {
       "name": "siare-py",
       "runtimeExecutable": "py",
       "runtimeArgs": ["-m", "http.server", "4173"],
+      "port": 4173
+    },
+    {
+      "name": "siare-perl",
+      "runtimeExecutable": "perl",
+      "runtimeArgs": ["_server.pl", "4173", "."],
       "port": 4173
     }
   ]

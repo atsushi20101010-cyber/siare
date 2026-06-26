@@ -270,6 +270,32 @@ body {
   color: var(--color-text-secondary);
 }
 
+/* ロゴ画像（テキストロゴから差し替え・透過PNG） */
+.brand__img {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+/* 透明ヘッダー（ヒーロー上の暗背景）では白く表示 */
+.site-header .brand__img {
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+/* スクロール後（明るいクリーム背景）は本来のテラコッタ色 */
+.site-header.is-scrolled .brand__img {
+  filter: none;
+}
+/* フッター（暗いチャコール背景）では白く表示 */
+.brand__img--footer {
+  filter: brightness(0) invert(1);
+  height: 44px;
+}
+@media (min-width: 768px) {
+  .brand__img {
+    height: 44px;
+  }
+}
+
 /* グローバルナビ（モバイル：非表示→展開） */
 .global-nav {
   position: fixed;
@@ -348,7 +374,7 @@ body {
 /* ============================================ */
 .hero {
   position: relative;
-  min-height: 78svh;
+  min-height: 88svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -408,8 +434,8 @@ body {
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(180deg, rgba(28, 24, 22, 0.58) 0%, rgba(28, 24, 22, 0.22) 24%, rgba(28, 24, 22, 0.22) 58%, rgba(28, 24, 22, 0.55) 100%),
-    radial-gradient(ellipse at center, rgba(28, 24, 22, 0.38) 0%, rgba(28, 24, 22, 0.15) 70%);
+    linear-gradient(180deg, rgba(28, 24, 22, 0.66) 0%, rgba(28, 24, 22, 0.34) 26%, rgba(28, 24, 22, 0.36) 60%, rgba(28, 24, 22, 0.64) 100%),
+    radial-gradient(ellipse at center, rgba(28, 24, 22, 0.48) 0%, rgba(28, 24, 22, 0.18) 72%);
 }
 
 .hero__inner {
@@ -426,35 +452,36 @@ body {
 }
 
 .hero__eyebrow {
-  font-family: var(--font-en-sans);
-  font-size: 12px;
-  letter-spacing: 0.22em;
-  text-transform: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-jp);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  font-weight: 500;
   color: var(--color-terracotta-light);
-  margin-bottom: 20px;
-  position: relative;
-  padding-left: 44px;
+  margin-bottom: 24px;
 }
 
-.hero__eyebrow::before {
+/* ラベル両脇の短い罫線（タブレット以上で表示） */
+.hero__eyebrow::before,
+.hero__eyebrow::after {
   content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 32px;
+  display: none;
+  width: 28px;
   height: 1px;
-  background-color: var(--color-terracotta-light);
+  background-color: rgba(232, 181, 160, 0.6);
 }
 
 .hero__heading {
   font-family: var(--font-jp-serif);
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 1.55;
-  letter-spacing: 0.06em;
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
   color: #fff;
   margin-bottom: 0;
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.45);
 }
 
 /* ============================================ */
@@ -500,16 +527,18 @@ body {
 .hero__lead {
   font-size: 14px;
   line-height: 2;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 20px;
-  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+  color: rgba(255, 255, 255, 0.92);
+  margin-top: 22px;
+  margin-bottom: 0;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
 }
 
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
-  margin-top: 36px;
+  margin-top: 40px;
 }
 
 /* ヒーロー上のゴーストボタン（白枠・白文字） */
@@ -770,6 +799,11 @@ body {
   margin-bottom: 28px;
 }
 
+/* モバイル：縦積み時はお問い合わせボタンを中央寄せ（≥768pxではflexレイアウトが優先） */
+.cta__action {
+  text-align: center;
+}
+
 /* ============================================ */
 /* 問い合わせフォーム                            */
 /* ============================================ */
@@ -779,6 +813,7 @@ body {
 
 .contact__inner {
   max-width: 760px;
+  margin-inline: auto;
 }
 
 .contact__head {
@@ -994,7 +1029,8 @@ body {
 
   /* 見出しサイズ */
   .hero__heading {
-    font-size: 44px;
+    font-size: 62px;
+    line-height: 1.32;
   }
 
   .section-heading {
@@ -1068,6 +1104,10 @@ body {
   .hero__eyebrow {
     font-size: 13px;
     margin-bottom: 24px;
+  }
+  .hero__eyebrow::before,
+  .hero__eyebrow::after {
+    display: block;
   }
   .hero__lead {
     font-size: 16px;
@@ -1186,8 +1226,16 @@ body {
   .hero {
     padding: calc(var(--header-height) + 80px) 60px 120px;
   }
+  .hero__text {
+    max-width: 1040px;
+  }
   .hero__heading {
-    font-size: 64px;
+    font-size: 82px;
+    line-height: 1.26;
+  }
+  .hero__eyebrow {
+    font-size: 13px;
+    margin-bottom: 30px;
   }
 
   .section-heading {
@@ -1210,5 +1258,345 @@ body {
   .section-heading--ruled::before,
   .section-heading--ruled::after {
     width: 64px;
+  }
+}
+
+/* ============================================ */
+/* 営業資料由来の追加セクション                   */
+/* ============================================ */
+
+/* 追加セクションの共通余白（モバイル） */
+.brand-story,
+.value,
+.flow,
+.strength,
+.pricing {
+  padding: 60px 24px;
+}
+
+/* 共通インナー */
+.brand-story__inner,
+.value__inner,
+.flow__inner,
+.strength__inner,
+.pricing__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+/* 共通：見出しヘッダ／リード */
+.section-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-head .section-heading--ruled {
+  margin-bottom: 20px;
+}
+.section-lead {
+  max-width: 720px;
+  margin: 16px auto 0;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--color-text-secondary);
+}
+
+/* 社名に込めた思い */
+.brand-story__inner {
+  max-width: 820px;
+  text-align: center;
+}
+.brand-story__letters {
+  font-family: var(--font-en-serif);
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  color: var(--color-terracotta);
+  margin: 20px 0 24px;
+  padding-left: 0.28em;
+}
+.brand-story__body {
+  font-size: 14px;
+  line-height: 2;
+  color: var(--color-text-secondary);
+}
+
+/* 提供する3つの価値 */
+.value {
+  background-color: var(--color-bg-section);
+}
+.value__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.value-item {
+  background-color: var(--color-bg-card);
+  border-radius: 4px;
+  padding: 32px 28px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+.value-item__label {
+  font-family: var(--font-en-sans);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--color-terracotta);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.value-item__title {
+  font-family: var(--font-jp-serif);
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.value-item__body {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--color-text-secondary);
+  text-align: left;
+}
+
+/* サービスカード：詳細メニュー */
+.card__list {
+  margin-top: 16px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.card__list li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+.card__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-terracotta-light);
+}
+
+/* 導入後の関わり方 */
+.flow {
+  background-color: var(--color-bg-section);
+}
+.flow__steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.flow-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background-color: var(--color-bg-card);
+  border-radius: 4px;
+  padding: 26px 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+.flow-step__num {
+  font-family: var(--font-en-serif);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-terracotta);
+  flex-shrink: 0;
+}
+.flow-step__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.flow-step__text {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+/* シアレの3つの特徴 */
+.strength__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+.strength-item {
+  border-left: 2px solid var(--color-terracotta);
+  padding: 4px 0 4px 22px;
+}
+.strength-item__num {
+  font-family: var(--font-en-serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-terracotta);
+  margin-bottom: 6px;
+}
+.strength-item__title {
+  font-family: var(--font-jp-serif);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.strength-item__body {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--color-text-secondary);
+}
+
+/* 料金のご案内 */
+.pricing {
+  background-color: var(--color-bg-section);
+}
+.pricing-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-line-light);
+  border-radius: 6px;
+  padding: 32px 28px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+.pricing-card--primary {
+  border-color: var(--color-terracotta-light);
+  border-top: 3px solid var(--color-terracotta);
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.pricing-card__label {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 12px;
+}
+.pricing-card__price {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+}
+.pricing-card__price strong {
+  font-family: var(--font-jp-serif);
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--color-terracotta);
+  letter-spacing: 0.02em;
+  margin: 0 4px;
+}
+.pricing-card__tax {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+.pricing-card__desc {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--color-text-secondary);
+}
+.pricing-card__note {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin-top: 14px;
+}
+.pricing__subhead {
+  text-align: center;
+  margin: 44px 0 20px;
+  font-family: var(--font-en-sans);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+.pricing__spot {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.pricing__footnote {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* 保有資格バッジ（代表プロフィール） */
+.message__sign-en {
+  display: block;
+  font-family: var(--font-en-sans);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+.qualifications {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+.qualifications li {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--color-terracotta-dark);
+  background-color: rgba(217, 128, 92, 0.07);
+  border: 1px solid var(--color-terracotta-light);
+  border-radius: 999px;
+  padding: 6px 15px;
+}
+
+/* 追加セクション：タブレット〜 */
+@media (min-width: 768px) {
+  .brand-story,
+  .value,
+  .flow,
+  .strength,
+  .pricing {
+    padding: 80px 40px;
+  }
+  .value__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .strength__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .pricing__spot {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .brand-story__letters {
+    font-size: 60px;
+  }
+}
+
+/* 追加セクション：デスクトップ〜 */
+@media (min-width: 1024px) {
+  .brand-story,
+  .value,
+  .flow,
+  .strength,
+  .pricing {
+    padding: 120px 60px;
+  }
+  .flow__steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .flow-step {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .section-lead,
+  .value-item__body,
+  .flow-step__text,
+  .strength-item__body,
+  .pricing-card__desc {
+    font-size: 15px;
   }
 }

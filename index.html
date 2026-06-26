@@ -20,15 +20,15 @@
   <!-- ============================================ -->
   <header class="site-header" id="site-header">
     <div class="site-header__inner">
-      <a class="brand" href="#">
-        <span class="brand__logo">SIARE</span>
-        <span class="brand__tagline">マンション運営コンサルタント</span>
+      <a class="brand" href="#" aria-label="シアレ株式会社 トップへ">
+        <img class="brand__img" src="images/logo.png" alt="SIARE マンション運営コンサルタント" width="1040" height="349">
       </a>
 
       <nav class="global-nav" id="global-nav" aria-label="メインナビゲーション">
         <ul class="global-nav__list">
           <li><a href="#service">サービス</a></li>
-          <li><a href="#message">代表メッセージ</a></li>
+          <li><a href="#strength">強み</a></li>
+          <li><a href="#pricing">料金</a></li>
           <li><a href="#company">会社概要</a></li>
           <li><a href="#contact">お問い合わせ</a></li>
         </ul>
@@ -60,8 +60,13 @@
 
       <div class="hero__inner">
         <div class="hero__text">
+          <p class="hero__eyebrow">大規模マンション専門　管理組合運営コンサルティング</p>
           <h1 class="hero__heading">マンションの未来は、<br><span class="kw">運営</span>が決める。</h1>
-          <a class="hero__contact-link" href="#contact">お問い合わせ</a>
+          <p class="hero__lead">シアレは、マンションの未来を考える<br class="hero__lead-br">管理組合のパートナーです。</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contact">無料で相談する <span aria-hidden="true">→</span></a>
+            <a class="btn btn--hero-ghost" href="#service">サービスを見る</a>
+          </div>
         </div>
       </div>
 
@@ -91,14 +96,63 @@
           </p>
         </div>
         <div class="concept__images">
-          <!-- <img src="images/concept-1.jpg" alt="..."> -->
-          <img src="https://placehold.co/600x800/EDE9E6/D9805C?text=Concept+1" alt="コンセプトイメージ1">
-          <!-- <img src="images/concept-2.jpg" alt="..."> -->
-          <img src="https://placehold.co/600x800/EDE9E6/D9805C?text=Concept+2" alt="コンセプトイメージ2">
+          <img src="images/concept-1.jpg" alt="マンションの外観" width="750" height="1000" loading="lazy">
+          <img src="images/concept-2.jpg" alt="資料をもとに運営を話し合う様子" width="750" height="1000" loading="lazy">
         </div>
       </div>
     </section>
     <!-- /ブランドコンセプト -->
+
+    <!-- ============================================ -->
+    <!-- 社名に込めた思い（BRAND NAME）               -->
+    <!-- ============================================ -->
+    <section class="brand-story" id="brand-story">
+      <div class="brand-story__inner">
+        <p class="label">BRAND NAME</p>
+        <h2 class="section-heading">社名「シアレ」に込めた思い</h2>
+        <p class="brand-story__letters" aria-hidden="true">SIARE</p>
+        <p class="brand-story__body">
+          「SIARE」は、4つの言葉の頭文字から生まれました。<br>
+          安定を土台に、運営の質を高め、専門家として伴走し、マンションを再生・再建へと導く——<br>
+          その思いを、社名に込めています。
+        </p>
+      </div>
+    </section>
+    <!-- /社名に込めた思い -->
+
+    <!-- ============================================ -->
+    <!-- 提供する3つの価値（OUR VALUE）               -->
+    <!-- ============================================ -->
+    <section class="value" id="value">
+      <div class="value__inner">
+        <div class="section-head">
+          <p class="label">OUR VALUE</p>
+          <h2 class="section-heading section-heading--ruled"><span>提供する3つの価値</span></h2>
+          <p class="section-lead">
+            シアレは「管理」ではなく「運営」を担います。管理会社と競合するのではなく、その守備範囲では
+            カバーしきれない領域を補い、管理組合が自分たちの意思で未来を選べるように支えます。
+          </p>
+        </div>
+        <div class="value__grid">
+          <article class="value-item">
+            <p class="value-item__label">VALUE 01</p>
+            <h3 class="value-item__title">運営の質向上</h3>
+            <p class="value-item__body">日常の管理ではなく、中長期の運営の質を高める。理事会の意思決定を、専門的な視点から支えます。</p>
+          </article>
+          <article class="value-item">
+            <p class="value-item__label">VALUE 02</p>
+            <h3 class="value-item__title">中立的な整理</h3>
+            <p class="value-item__body">管理会社とも、特定の立場とも対立しない。管理組合にとって何が最適かだけを基準に、論点を整理します。</p>
+          </article>
+          <article class="value-item">
+            <p class="value-item__label">VALUE 03</p>
+            <h3 class="value-item__title">判断材料の提供</h3>
+            <p class="value-item__body">複雑な情報をわかりやすく整理し、理事会が自信を持って判断できる材料を揃えます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- /提供する3つの価値 -->
 
     <!-- ============================================ -->
     <!-- サービス（4カード）                          -->
@@ -124,6 +178,12 @@
             <p class="card__body">
               10年・20年先を見据えた資金設計。修繕積立金の見直しや長期修繕計画の策定を、具体的にサポートします。
             </p>
+            <ul class="card__list">
+              <li>一般会計の収支改善・経費削減提案</li>
+              <li>国債・地方債等の債券による積立金運用の制度設計</li>
+              <li>修繕積立金の過不足診断と見直し</li>
+              <li>長期修繕計画と連動した財務シミュレーション</li>
+            </ul>
           </article>
 
           <!-- カード2 -->
@@ -142,6 +202,12 @@
             <p class="card__body">
               契約関係、管理規約、総会運営、合意形成など、安心できる運営の基盤を整え、円滑なマンション運営の仕組みづくりを支援します。
             </p>
+            <ul class="card__list">
+              <li>管理規約の整備・全面改正対応</li>
+              <li>管理委託契約の精査と条件整理</li>
+              <li>総会・理事会運営の手続き支援</li>
+              <li>区分所有法改正への対応助言</li>
+            </ul>
           </article>
 
           <!-- カード3 -->
@@ -163,6 +229,12 @@
             <p class="card__body">
               大規模修繕計画と資金計画の最適化から、合意形成、業者選定の支援まで、計画を確実に実行へつなげます。
             </p>
+            <ul class="card__list">
+              <li>大規模修繕の合意形成サポート</li>
+              <li>工事費用の妥当性検証</li>
+              <li>業者選定・相見積もりの整理</li>
+              <li>施工から引渡しまでの品質確認</li>
+            </ul>
           </article>
 
           <!-- カード4 -->
@@ -180,6 +252,12 @@
             <p class="card__body">
               管理会社を変えることは、運営の質を変えること。比較検討、条件整理、候補選定、交渉支援まで、管理組合に寄り添い、円滑な移行を実現します。
             </p>
+            <ul class="card__list">
+              <li>現管理会社の評価・課題整理</li>
+              <li>新管理会社の比較検討・候補選定</li>
+              <li>条件交渉・移行プロセスの支援</li>
+              <li>住民・理事会への合意形成サポート</li>
+            </ul>
           </article>
 
         </div>
@@ -188,13 +266,121 @@
     <!-- /サービス -->
 
     <!-- ============================================ -->
+    <!-- 導入後の関わり方（HOW WE WORK）              -->
+    <!-- ============================================ -->
+    <section class="flow" id="flow">
+      <div class="flow__inner">
+        <div class="section-head">
+          <p class="label">HOW WE WORK</p>
+          <h2 class="section-heading section-heading--ruled"><span>導入後の関わり方</span></h2>
+          <p class="section-lead">
+            理事会や専門委員会に出席し、専門的な知見を提供しながら運営に伴走します。住民主導では難しい部分や、
+            利益相反となりうる場面を、第三者の立場でフォローします。
+          </p>
+        </div>
+        <div class="flow__steps">
+          <article class="flow-step">
+            <p class="flow-step__num">01</p>
+            <div class="flow-step__body">
+              <h3 class="flow-step__title">理事会・専門委員会への出席</h3>
+              <p class="flow-step__text">理事会や各種専門委員会に出席し、専門的知見を提供。議論の論点を整理し、意思決定をサポートします。</p>
+            </div>
+          </article>
+          <article class="flow-step">
+            <p class="flow-step__num">02</p>
+            <div class="flow-step__body">
+              <h3 class="flow-step__title">規約・細則案、選定補助の提供</h3>
+              <p class="flow-step__text">必要に応じて管理規約・細則の案を作成。工事業者の選定など、住民主導では困難・利益相反となりうる部分を第三者的にフォローします。</p>
+            </div>
+          </article>
+          <article class="flow-step">
+            <p class="flow-step__num">03</p>
+            <div class="flow-step__body">
+              <h3 class="flow-step__title">総会議案の素案作成・当日対応</h3>
+              <p class="flow-step__text">理事会等で決まった事項を総会に提出する議案書の素案を作成。総会当日も出席し、質疑応答の補助を行います。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- /導入後の関わり方 -->
+
+    <!-- ============================================ -->
+    <!-- シアレの3つの特徴（OUR STRENGTH）            -->
+    <!-- ============================================ -->
+    <section class="strength" id="strength">
+      <div class="strength__inner">
+        <div class="section-head">
+          <p class="label">OUR STRENGTH</p>
+          <h2 class="section-heading section-heading--ruled"><span>シアレの3つの特徴</span></h2>
+        </div>
+        <div class="strength__grid">
+          <article class="strength-item">
+            <p class="strength-item__num">01</p>
+            <h3 class="strength-item__title">大規模マンションに特化</h3>
+            <p class="strength-item__body">論点が多く合意形成が複雑な大規模マンションは、専門的な伴走を最も必要としています。一方でこの領域に精通した独立系の専門家はほとんど存在しません。だからこそ私たちは大規模マンションに専念しています。</p>
+          </article>
+          <article class="strength-item">
+            <p class="strength-item__num">02</p>
+            <h3 class="strength-item__title">出来高払いは採用しません</h3>
+            <p class="strength-item__body">工事費や削減額に連動した「出来高払い」は採用しません。成果報酬型は必要以上の工事や過剰な提案を生む構造的リスクをはらむからです。経費削減や業者選定補助は定額の顧問契約の範囲内とし、常に管理組合にとっての最適解を追求します。</p>
+          </article>
+          <article class="strength-item">
+            <p class="strength-item__num">03</p>
+            <h3 class="strength-item__title">第三者として運営を評価</h3>
+            <p class="strength-item__body">管理会社を批判する存在でも、擁護する存在でもありません。理事会の運営や管理会社からの提案が客観的に見て適正かを、独立した第三者の視点で評価・整理します。その客観性こそが、健全な運営の土台になると考えています。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- /シアレの3つの特徴 -->
+
+    <!-- ============================================ -->
+    <!-- 料金のご案内（PRICING）                      -->
+    <!-- ============================================ -->
+    <section class="pricing" id="pricing">
+      <div class="pricing__inner">
+        <div class="section-head">
+          <p class="label">PRICING</p>
+          <h2 class="section-heading section-heading--ruled"><span>料金のご案内</span></h2>
+          <p class="section-lead">
+            工事費や削減額に連動した出来高払いは採用していません。明朗な定額制を基本とし、マンションの規模や
+            関与の度合いに応じて、最適なプランをご提案します。
+          </p>
+        </div>
+
+        <div class="pricing-card pricing-card--primary">
+          <p class="pricing-card__label">顧問契約</p>
+          <p class="pricing-card__price">最低月額 <strong>6万円</strong><span class="pricing-card__tax">（税別）〜</span></p>
+          <p class="pricing-card__desc">理事会・総会への出席、運営サポート、各種ご相談に継続的に対応します。料金はマンションの規模や出席回数に応じて変動します。</p>
+          <p class="pricing-card__note">※最低月額は理事会出席（月1回）・総会出席（無制限）を想定。各種専門委員会への定期的なご出席をご希望の場合は別途お見積りとさせていただきます。</p>
+        </div>
+
+        <p class="pricing__subhead">スポット業務</p>
+        <div class="pricing__spot">
+          <div class="pricing-card">
+            <p class="pricing-card__label">長期修繕計画の作成</p>
+            <p class="pricing-card__price"><strong>30万円</strong><span class="pricing-card__tax">（税別）〜</span></p>
+            <p class="pricing-card__desc">設備修繕等の見積結果に基づいた、精度の高い長期修繕計画を作成します。</p>
+          </div>
+          <div class="pricing-card">
+            <p class="pricing-card__label">管理規約の全面改定</p>
+            <p class="pricing-card__price"><strong>9.5万円</strong><span class="pricing-card__tax">（税別）〜</span></p>
+            <p class="pricing-card__desc">運用実態に合わせた管理規約・細則の全面的な見直しを行います。</p>
+          </div>
+        </div>
+        <p class="pricing__footnote">※上記は基本料金です。マンションの規模・状況・ご要望により変動します。まずはお気軽にご相談ください。</p>
+      </div>
+    </section>
+    <!-- /料金のご案内 -->
+
+    <!-- ============================================ -->
     <!-- シアレが向き合う管理組合                      -->
     <!-- ============================================ -->
     <section class="target" id="target">
       <div class="target__inner">
         <div class="target__image">
-          <!-- <img src="images/target.jpg" alt="..."> -->
-          <img src="https://placehold.co/800x600/EDE9E6/D9805C?text=Target" alt="管理組合の打ち合わせイメージ">
+          <img src="images/target.jpg" alt="理事会・管理組合の打ち合わせの様子" width="1000" height="750" loading="lazy">
         </div>
         <div class="target__text">
           <h2 class="section-heading section-heading--left">シアレが向き合う管理組合</h2>
@@ -235,8 +421,7 @@
     <section class="message" id="message">
       <div class="message__inner">
         <div class="message__image">
-          <!-- <img src="images/ceo.jpg" alt="..."> -->
-          <img src="https://placehold.co/800x1000/EDE9E6/D9805C?text=CEO" alt="代表取締役社長 新川 淳史">
+          <img src="images/ceo.png" alt="代表取締役　新川 淳史" width="719" height="971" loading="lazy">
         </div>
         <div class="message__text">
           <p class="label">代表メッセージ</p>
@@ -253,7 +438,12 @@
           <p class="message__body">
             その空白を、シアレは埋めます。管理組合が、自分たちの意思で未来を選べるように。
           </p>
-          <p class="message__sign">代表取締役社長　新川 淳史</p>
+          <p class="message__sign">代表取締役　新川 淳史<span class="message__sign-en">Atsushi Shinkawa</span></p>
+          <ul class="qualifications" aria-label="保有資格">
+            <li>マンション管理士</li>
+            <li>管理業務主任者</li>
+            <li>宅地建物取引士</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -273,7 +463,7 @@
             </div>
             <div class="company__row">
               <dt>代表者</dt>
-              <dd>代表取締役社長　新川 淳史</dd>
+              <dd>代表取締役　新川 淳史</dd>
             </div>
             <div class="company__row">
               <dt>所在地</dt>
@@ -291,11 +481,14 @@
               <dt>設立</dt>
               <dd>2026年6月</dd>
             </div>
+            <div class="company__row">
+              <dt>保有資格</dt>
+              <dd>マンション管理士／管理業務主任者／宅地建物取引士</dd>
+            </div>
           </dl>
         </div>
         <div class="company__image">
-          <!-- <img src="images/company.jpg" alt="..."> -->
-          <img src="https://placehold.co/800x1000/EDE9E6/D9805C?text=Company" alt="シアレ株式会社オフィスイメージ">
+          <img src="images/company.jpg" alt="オフィスビルのイメージ" width="800" height="1000" loading="lazy">
         </div>
       </div>
     </section>
@@ -405,13 +598,13 @@
   <footer class="site-footer">
     <div class="site-footer__inner">
       <div class="site-footer__brand">
-        <span class="brand__logo brand__logo--light">SIARE</span>
-        <span class="brand__tagline brand__tagline--light">マンション運営コンサルタント</span>
+        <img class="brand__img brand__img--footer" src="images/logo.png" alt="SIARE マンション運営コンサルタント" width="1040" height="349">
       </div>
       <nav class="footer-nav" aria-label="フッターナビゲーション">
         <ul class="footer-nav__list">
           <li><a href="#service">サービス</a></li>
-          <li><a href="#message">代表メッセージ</a></li>
+          <li><a href="#strength">強み</a></li>
+          <li><a href="#pricing">料金</a></li>
           <li><a href="#company">会社概要</a></li>
           <li><a href="#contact">お問い合わせ</a></li>
         </ul>
