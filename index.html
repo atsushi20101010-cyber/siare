@@ -108,14 +108,45 @@
     <!-- ============================================ -->
     <section class="brand-story" id="brand-story">
       <div class="brand-story__inner">
-        <p class="label">BRAND NAME</p>
-        <h2 class="section-heading">社名「シアレ」に込めた思い</h2>
-        <p class="brand-story__letters" aria-hidden="true">SIARE</p>
-        <p class="brand-story__body">
-          「SIARE」は、4つの言葉の頭文字から生まれました。<br>
-          安定を土台に、運営の質を高め、専門家として伴走し、マンションを再生・再建へと導く——<br>
-          その思いを、社名に込めています。
-        </p>
+        <div class="section-head">
+          <p class="label">BRAND NAME</p>
+          <h2 class="section-heading section-heading--ruled"><span>社名「シアレ」に込めた思い</span></h2>
+          <p class="section-lead">
+            「SIARE」は、私たちが大切にする4つの言葉の頭文字から生まれました。
+            その一文字ずつに、管理組合とともに歩む姿勢を込めています。
+          </p>
+        </div>
+
+        <ul class="acronym">
+          <li class="acronym__item">
+            <span class="acronym__letter">S</span>
+            <div class="acronym__detail">
+              <p class="acronym__word"><span class="acronym__en"><b>S</b>tability</span><span class="acronym__jp">安定</span></p>
+              <p class="acronym__desc">財務や修繕積立金の基盤を整え、マンション運営の安定した土台を築きます。</p>
+            </div>
+          </li>
+          <li class="acronym__item">
+            <span class="acronym__letter">I</span>
+            <div class="acronym__detail">
+              <p class="acronym__word"><span class="acronym__en"><b>I</b>mprovement</span><span class="acronym__jp">向上</span></p>
+              <p class="acronym__desc">日々の管理にとどまらず、中長期の運営の質を継続的に高めていきます。</p>
+            </div>
+          </li>
+          <li class="acronym__item">
+            <span class="acronym__letter">A</span>
+            <div class="acronym__detail">
+              <p class="acronym__word"><span class="acronym__en"><b>A</b>dvisors</span><span class="acronym__jp">顧問</span></p>
+              <p class="acronym__desc">中立的な専門家として理事会に寄り添い、顧問として運営に伴走します。</p>
+            </div>
+          </li>
+          <li class="acronym__item">
+            <span class="acronym__letter">RE</span>
+            <div class="acronym__detail">
+              <p class="acronym__word"><span class="acronym__en"><b>RE</b>birth / <b>RE</b>build</span><span class="acronym__jp">再生・再建</span></p>
+              <p class="acronym__desc">資産価値を見据え、マンションの再生・再建につながる運営を支えます。</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
     <!-- /社名に込めた思い -->
@@ -174,7 +205,7 @@
                 <rect x="30" y="10" width="6" height="30"></rect>
               </svg>
             </div>
-            <h3 class="card__title">財務マネジメント</h3>
+            <h3 class="card__title">会計マネジメント</h3>
             <p class="card__body">
               10年・20年先を見据えた資金設計。修繕積立金の見直しや長期修繕計画の策定を、具体的にサポートします。
             </p>
@@ -368,6 +399,16 @@
             <p class="pricing-card__price"><strong>9.5万円</strong><span class="pricing-card__tax">（税別）〜</span></p>
             <p class="pricing-card__desc">運用実態に合わせた管理規約・細則の全面的な見直しを行います。</p>
           </div>
+          <div class="pricing-card">
+            <p class="pricing-card__label">管理会社リプレイス支援</p>
+            <p class="pricing-card__price"><strong>10万円</strong><span class="pricing-card__tax">（税別）〜</span></p>
+            <p class="pricing-card__desc">現管理会社の評価から、新管理会社の比較検討・条件交渉・移行までを支援します。</p>
+          </div>
+          <div class="pricing-card">
+            <p class="pricing-card__label">修繕積立金の運用制度設計</p>
+            <p class="pricing-card__price"><strong>10万円</strong><span class="pricing-card__tax">（税別）〜</span></p>
+            <p class="pricing-card__desc">国債・地方債等の安全性の高い債券を中心に、積立金の運用制度を設計します。</p>
+          </div>
         </div>
         <p class="pricing__footnote">※上記は基本料金です。マンションの規模・状況・ご要望により変動します。まずはお気軽にご相談ください。</p>
       </div>
@@ -470,6 +511,10 @@
               <dd>大阪市北区堂島浜2-2-28　堂島アクシスビル4階　SYNTH</dd>
             </div>
             <div class="company__row">
+              <dt>電話番号</dt>
+              <dd><a href="tel:0644000551">06-4400-0551</a></dd>
+            </div>
+            <div class="company__row">
               <dt>資本金</dt>
               <dd>3,000,000円</dd>
             </div>
@@ -527,17 +572,24 @@
           </p>
         </header>
 
-        <form class="contact-form" action="#" method="post" novalidate>
+        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <!-- Web3Forms 設定（a.shinkawa@siare.co.jp で発行したアクセスキー。送信は発行元メール宛に届きます） -->
+          <input type="hidden" name="access_key" value="95aca8a2-994a-4ebf-9baf-b83a67bfbae2">
+          <input type="hidden" name="subject" value="【シアレ】お問い合わせフォームより">
+          <input type="hidden" name="from_name" value="シアレ お問い合わせフォーム">
+          <!-- スパム対策（ハニーポット・人間には非表示） -->
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none !important;">
+
           <div class="form-row">
             <label class="form-label" for="cf-name">
               お名前 <span class="form-required">必須</span>
             </label>
-            <input class="form-input" type="text" id="cf-name" name="name" autocomplete="name" required>
+            <input class="form-input" type="text" id="cf-name" name="お名前" autocomplete="name" required>
           </div>
 
           <div class="form-row">
             <label class="form-label" for="cf-building">マンション名・管理組合名</label>
-            <input class="form-input" type="text" id="cf-building" name="building" autocomplete="organization">
+            <input class="form-input" type="text" id="cf-building" name="物件名・管理組合名" autocomplete="organization">
           </div>
 
           <div class="form-grid">
@@ -550,19 +602,19 @@
 
             <div class="form-row">
               <label class="form-label" for="cf-tel">電話番号</label>
-              <input class="form-input" type="tel" id="cf-tel" name="tel" autocomplete="tel">
+              <input class="form-input" type="tel" id="cf-tel" name="電話番号" autocomplete="tel">
             </div>
           </div>
 
           <div class="form-row">
             <label class="form-label" for="cf-subject">お問い合わせ種別</label>
-            <select class="form-input form-select" id="cf-subject" name="subject">
+            <select class="form-input form-select" id="cf-subject" name="お問い合わせ種別">
               <option value="">選択してください</option>
-              <option value="financial">財務マネジメントについて</option>
-              <option value="legal">法務・運営マネジメントについて</option>
-              <option value="repair">修繕マネジメントについて</option>
-              <option value="replace">管理会社リプレイスについて</option>
-              <option value="other">その他</option>
+              <option value="会計マネジメントについて">会計マネジメントについて</option>
+              <option value="法務・運営マネジメントについて">法務・運営マネジメントについて</option>
+              <option value="修繕マネジメントについて">修繕マネジメントについて</option>
+              <option value="管理会社リプレイスについて">管理会社リプレイスについて</option>
+              <option value="その他">その他</option>
             </select>
           </div>
 
@@ -570,12 +622,12 @@
             <label class="form-label" for="cf-message">
               お問い合わせ内容 <span class="form-required">必須</span>
             </label>
-            <textarea class="form-input form-textarea" id="cf-message" name="message" rows="6" required></textarea>
+            <textarea class="form-input form-textarea" id="cf-message" name="お問い合わせ内容" rows="6" required></textarea>
           </div>
 
           <div class="form-consent">
             <label class="form-consent__label">
-              <input type="checkbox" name="consent" required>
+              <input type="checkbox" name="個人情報の取り扱いに同意" value="同意する" required>
               <span>個人情報の取り扱いに同意のうえ送信します。</span>
             </label>
           </div>
@@ -585,6 +637,8 @@
               送信する <span aria-hidden="true">→</span>
             </button>
           </div>
+
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
@@ -599,6 +653,11 @@
     <div class="site-footer__inner">
       <div class="site-footer__brand">
         <img class="brand__img brand__img--footer" src="images/logo.png" alt="SIARE マンション運営コンサルタント" width="1040" height="349">
+        <p class="footer-contact">
+          <span class="footer-contact__addr">大阪市北区堂島浜2-2-28 堂島アクシスビル4階 SYNTH</span>
+          <a class="footer-contact__link" href="tel:0644000551">TEL 06-4400-0551</a>
+          <a class="footer-contact__link" href="mailto:info@siare.co.jp">info@siare.co.jp</a>
+        </p>
       </div>
       <nav class="footer-nav" aria-label="フッターナビゲーション">
         <ul class="footer-nav__list">
